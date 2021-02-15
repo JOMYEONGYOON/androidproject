@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:onClick="joinclick">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <VideoView
+            android:id="@+id/screenVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="422dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/jemail"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="이메일"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF" />
+
+            <Button
+                android:id="@+id/authBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="emailcheck"
+                android:text="이메일 중복 체크" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/jpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="패스워드"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/jpassCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="패스워드 확인"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF" />
+
+
+        <EditText
+            android:id="@+id/jname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="이름"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/jnickname"
+                style="@android:style/Widget.AutoCompleteTextView"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="닉네임"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="#FFFFFF" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:onClick="nicknamecheck"
+                android:text="닉네임 중복 체크" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/jtel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="전화번호"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/joinbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:onClick="joinclick"
+            android:text="회원가입" />
+
+
+    </LinearLayout>
+</ScrollView>
